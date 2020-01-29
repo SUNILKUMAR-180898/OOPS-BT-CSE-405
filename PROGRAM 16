@@ -1,15 +1,12 @@
 //PROGRAM TO OVERLOAD URANARY OPERATOR
 #include <iostream>
-
 using namespace std;
-
 class alphabet
 {
     char p,q;
      public:
          void letter(char m,char n)
          {
-
              p=m;
              q=n;
          }
@@ -21,15 +18,12 @@ class alphabet
          }
          void display()
          {
-
-             cout<<"alphabet after incrementing is: "<<p<<endl;
+         cout<<"alphabet after incrementing is: "<<p<<endl;
              cout<<"alphabet after incrementing is: "<<q;
         }
-
 };
 
 int main()
-
 {
     alphabet obj1;
     char m,n;
