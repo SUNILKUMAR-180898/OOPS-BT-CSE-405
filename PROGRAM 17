@@ -1,23 +1,18 @@
 //PROGRAM TO OVERLOAD BINARY OPERATOR
 #include <iostream>
-
 using namespace std;
-
 class coordinate
 {
     int a;
     int b;
-
 public :
     void point (int x,int y)
     {
-
         a=x;
         b=y;
     }
     coordinate operator +(coordinate c)
     {
-
         coordinate sum;
         sum.a=a+c.a;
         sum.b=b+c.b;
