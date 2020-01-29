@@ -1,0 +1,28 @@
+ // PROGRAM TO MAKE THE USE OF INLINE FUNCTION
+#include <iostream>
+
+using namespace std;
+
+class Square
+{
+    int number;
+     public :
+    Square(int n)
+    {
+        number = n;
+    }
+    inline void square ();
+};
+void inline Square:: square()
+{
+    cout<<number*number;
+}
+int main()
+{
+    int n;
+    cout<<"enter number to find square";
+    cin>>n;
+    Square obj(n);
+    obj.square();
+    return 0;
+}
