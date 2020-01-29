@@ -1,0 +1,44 @@
+//PROGRAM TO OVERLOAD URANARY OPERATOR
+#include <iostream>
+
+using namespace std;
+
+class alphabet
+{
+    char p,q;
+     public:
+         void letter(char m,char n)
+         {
+
+             p=m;
+             q=n;
+         }
+         alphabet operator +()
+         {
+             alphabet object;
+             object.p=(int) p+1;
+             object.q=(int) q+1;
+         }
+         void display()
+         {
+
+             cout<<"alphabet after incrementing is: "<<p<<endl;
+             cout<<"alphabet after incrementing is: "<<q;
+        }
+
+};
+
+int main()
+
+{
+    alphabet obj1;
+    char m,n;
+    cout<<"enter a capital alphabet ";
+    cin>>m;
+    cout<<"enter a small alphabet ";
+    cin>>n;
+    obj1.letter(m,n);
+    alphabet obj2=(+obj1);
+    obj2.display();
+    return 0;
+}
