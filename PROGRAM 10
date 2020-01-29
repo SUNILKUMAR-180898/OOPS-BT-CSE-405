@@ -1,0 +1,83 @@
+/*PROGRAM TO DEMONSTRATE THE CONCEPT OF:
+DEFAULT CONSTRUCTO
+PARAMETERIZED CONSTRUCTOR
+COPY CONSTRUCTOR
+CONSTRUCTOR OVERLOADING*/
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+ class STUDENT
+ {
+     int num1, num2;
+     public:
+     STUDENT()
+{
+     num1=-1;
+      num2=-1;
+}
+STUDENT(int n)
+{
+     num1=n;
+}
+ STUDENT(int n,int x)
+ {
+     num1=n;
+     num2=x;
+ }
+  void display ()
+
+  {
+      cout<<"value of variable num1 is: "<<num1<<endl;
+       cout<<"value of variable num2 is: "<<num2<<endl;
+   }};
+   class Name
+   {
+       string first_name, last_name;
+       public:
+           Name(string x,string y)
+            {
+                first_name=x;
+                last_name=y;
+            }
+             Name(Name &obj)
+              {
+                  first_name=obj.first_name;
+                   last_name=obj.last_name;
+              }
+               void display()
+                {
+                     cout<<"first name: "<<first_name<<endl;
+                      cout<<"last name: "<<last_name;
+                }
+};
+ int main()
+  {
+      int n,x;
+       STUDENT obj;
+        cout<<"calling display using default constructor"<<endl;
+        obj.display();
+        cout<<"calling display using one parameter"<<endl;
+        cout<<"enter a integer value: ";
+        cin>>n;
+            STUDENT obj1(n);
+            cout<<"enter a integer value: ";
+             cin>>n;
+
+              obj1.display ();
+              cout<<"using constructor overloading"<<endl;
+               cout<<"enter two values";
+               cin>>n>>x;
+                STUDENT obj2(n,x);
+                obj2.display();
+               string p,q;
+               cout<<"copy constructor using string"<<endl;
+        cout<<"enter first and last name: ";
+         cin>>p>>q;
+          Name object(p,q);
+          Name object1(object);
+           object1.display();
+            return 0;
+  }
+
+
