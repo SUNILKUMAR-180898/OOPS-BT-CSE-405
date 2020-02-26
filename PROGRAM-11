@@ -1,0 +1,14 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int a=10;
+int main()
+{
+	int a=15;
+	cout<<"\nLocal a="<<a<<"Globle a="<<::a;
+	::a=20;
+	cout<<"\nLocal a="<<a<<"Globle a="<<::a<<endl;
+	return 0;
+	getch;
+	
+}
